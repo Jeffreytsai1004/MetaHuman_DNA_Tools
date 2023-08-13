@@ -1,8 +1,8 @@
-# Rig Assembly
+# Rig Assembly 组装
 
 装配 API 用于从给定的 DNA 文件路径轻松装配 Maya 场景中的角色装备。
 
-## Importing
+## Importing 导入
 
 ```
 from dna_viewer import assemble_rig
