@@ -1,46 +1,44 @@
-# DNAViewer
-The [`dna_viewer`](/dna_viewer) contains all the needed classes for reading and creating a functional rig in Maya from the DNA file.
-It is organized in a way that allows every option to be configurable, so you can easily get the exact result you want.
+[`dna_viewer`](/dna_viewer) 包含从 DNA 文件读取和在 Maya 中创建功能装备所需的所有类。
+它的组织方式允许每个选项都是可配置的，因此您可以轻松获得您想要的确切结果。
 
-## Examples
-- [Generates rig and export FBX per LOD](/examples/dna_viewer_demo.py)
-- [Propagate changes from Maya scene to dna](/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py)
-- [Simple UI](/examples/dna_viewer_run_in_maya.py)
+## 例子
+- [根据 LOD 生成装备并导出 FBX](/examples/dna_viewer_demo.py)
+- [将更改从 Maya 场景传播到 dna](/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py)
+- [简单用户界面](/examples/dna_viewer_run_in_maya.py)
 
 
-## Usage from code
-There are two [APIs](docs/dna_viewer_api.md):
+## 代码中的用法
+那里有两个 [APIs](docs/dna_viewer_api.md):
   - [assemble](docs/dna_viewer_api_rig_assembly.md)
   - [mesh](docs/dna_viewer_api_mesh_utilities.md)
 
-The usage of these can be found in the [dna_viewer_demo.py](/examples/dna_viewer_demo.py).
+这些的用法可以在 [dna_viewer_demo.py](/examples/dna_viewer_demo.py).
 
-## Usage in Maya 
-Usage in Maya is explained [here](dna_viewer_maya.md)
+## 在Maya中的用法
+Maya 中的用法说明 [here](dna_viewer_maya.md)
 
 
-## Folder structure
+## 文件夹结构
 
-- [builder](/dna_viewer/builder) - Contains the builder classes, which are used for easily adding configuration options
-and building the scene, character, meshes, etc.
-- [config](/dna_viewer/config) - Contains classes that represent configuration options. These files are used for fine-tuning the options.
-- [const](/dna_viewer/const) - Contains constants files used in the project.
-- [model](/dna_viewer/model) - Contains the data classes used in the project.
-- [reader](/dna_viewer/reader) - Contains the classes that are used for reading the contents of the DNA file.
-- [ui](/dna_viewer/ui) - Contains the classes needed for the Maya UI.
-- [util](/dna_viewer/util) - Mostly contains the classes that are wrapper classes around Maya method calls.
+- [builder](/dna_viewer/builder) - 包含构建器类，用于轻松添加配置选项并构建场景、角色、网格等。
+- [config](/dna_viewer/config) - 包含表示配置选项的类。 这些文件用于微调选项。
+- [const](/dna_viewer/const) - 包含项目中使用的常量文件。
+- [model](/dna_viewer/model) - 包含项目中使用的数据类。
+- [reader](/dna_viewer/reader) - 包含用于读取 DNA 文件内容的类。
+- [ui](/dna_viewer/ui) - 包含 Maya UI 所需的类。
+- [util](/dna_viewer/util) - 主要包含 Maya 方法调用的包装类。
 
-## How it works
+## 如何运行
 
-The general flow is the following:
+一般流程如下：
 
 ![image](img/flow_general.png)
 
-The flow of the scene building process is the following:
+场景构建流程如下：
 
 ![image](img/flow_scene_build.png)
 
-The flow of the rig building process is the following:
+钻机构建过程的流程如下：
 
 ![image](img/flow_character_build.png)
 
