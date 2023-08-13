@@ -1,36 +1,35 @@
-# Repository Organization
+# 存储库组织
 
-This repository contains two independent components:
-1. **dnacalib C++ library** - used to manipulate DNA files
-2. **dna_viewer python code** - used to visualize DNA in Autodesk Maya
+该存储库包含两个独立的组件：
+1. **dnacalib C++ 库** - 用于操作 DNA 文件
+2. **dna_viewer python 代码** - 用于在 Autodesk Maya 中可视化 DNA
 
-# Folder structure
+# 文件夹结构
 
-- [dnacalib](/dnacalib) - DNACalib source code
-- [dna_viewer](/dna_viewer) - source code of dna_viewer
-- [examples](/examples) - several Python scripts to show basic usage of dna_viewer and the Python wrapper for DNACalib
-- [lib](/lib) - pre-built binaries for DNACalib, PyDNACalib, and PyDNA
-- [data](/data) - required DNAs and Maya scenes
-- [docs](/docs) - documentation
+- [dnacalib](/dnacalib) - DNACalib 源代码
+- [dna_viewer](/dna_viewer) - dna_viewer的源代码
+- [示例](/examples) - 几个 Python 脚本，用于展示 dna_viewer 和 DNACalib 的 Python 包装器的基本用法
+- [lib](/lib) - DNACalib、PyDNACalib 和 PyDNA 的预构建二进制文件
+- [数据](/数据) - 所需的 DNA 和 Maya 场景
+- [文档](/docs) - 文档
 
 
-## DNACalib
-Documentation is located [here](dnacalib.md)
+## DNA 校准
+文档位于[此处](dnacalib.md)
 
-## DNAViewer
-Documentation is located [here](dna_viewer.md)
+## DNA查看器
+文档位于[此处](dna_viewer.md)
 
-## Examples
-To run [DNAViewer examples](/docs/dna_viewer.md#examples), you must have Maya 2022 installed.
-To run [DNACalib examples](/docs/dnacalib.md#python), you need Python3.
+## 例子
+要运行 [DNAViewer 示例](/docs/dna_viewer.md#examples)，您必须安装 Maya 2022。
+要运行 [DNACalib 示例](/docs/dnacalib.md#python)，您需要 Python3。
 
 ## Lib
 
-[Lib folder](/lib) contains pre-built binaries of the DNACalib library for Windows and Linux. Additionally, a Maya plugin for
-RL4 is also available.
+[Lib 文件夹](/lib) 包含适用于 Windows 和 Linux 的 DNACalib 库的预构建二进制文件。 此外，还有一个 Maya 插件 RL4 也可用。
 
-### Linux location
-You have to copy or create symbolic links for all **.so** files in [lib](lib/linux):
+### Linux 位置
+您必须为 [lib](lib/linux) 中的所有 **.so** 文件复制或创建符号链接：
 
 ```shell
 sudo ln -s ~/dna_calibration/lib/linux/_py3dna.so /usr/lib/_py3dna.so
@@ -43,19 +42,19 @@ sudo ln -s ~/dna_calibration/lib/linux/libembeddedRL4.so /usr/lib/embeddedRL4.ml
 
 ```
 
-Note: Change the path `~/dna_calibration` to where `dna_calibration` is located.
+注意：将路径 `~/dna_calibration` 更改为 `dna_calibration` 所在位置。
 
 ## Data
 
-The [`data folder`](/data) contains example DNA files. We provided two MetaHuman DNA files (Ada and Taro, our first Presets).
+[`数据文件夹`](/data) 包含示例 DNA 文件。 我们提供了两个 MetaHuman DNA 文件（Ada 和 Taro，我们的第一个预设）。
 
 | Ada | Taro |
 |---|---|
 |![image](img/metahuman_008.png)| ![image](img/metahuman_010.png) |
 
-Additionally, we added [`gui`](/data/gui.ma) and [`analog_gui`](/data/analog_gui.ma) Maya scenes which are used during
-Maya scene assemble.
-Furthermore, [`after_assembly_script.py`](/data/after_assembly_script.py) is used to organize objects in scene and
-connect controls. The ideal setup looks like this:
+此外，我们还添加了 [`gui`](/data/gui.ma) 和 [`analog_gui`](/data/analog_gui.ma) Maya 场景，这些场景在
+玛雅场景组装。
+此外，[`after_assemble_script.py`](/data/after_assemble_script.py) 用于组织场景中的对象和
+连接控件。 理想的设置如下所示：
 
 ![image](img/aas.png)
