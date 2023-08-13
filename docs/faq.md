@@ -1,37 +1,36 @@
-# Frequently Asked Questions (FAQ)
+# 常见问题 (FAQ)
 
-## Fix "RuntimeError: Error loading DNA: DNA signature mismatched, expected DNA, got ver?"
+## 修复“运行时错误：加载 DNA 时出错：DNA 签名不匹配，预期 DNA，有版本吗？”
 
-In order to fix this issue, you should install [git-lfs](https://git-lfs.github.com/), and clone the repository again. 
-DNA files will be downloaded correctly then.
-If you cannot install git-lfs, you can download DNA files manually.
-
-
-## How do I distribute a Maya scene?
-
-Your scene should work out of the box if you include the following in the distribution:
-- Scene file (`.mb` file)
-- DNA (`.dna` file)
-- Workspace (`workspace.mel` file)
-
-All of these files need to be distributed together. If those files are not bundled and you experience some issues with you rig in Maya, 
-try the following steps:
-
-### How do I share the generated files?
-If you want to distribute a generated Maya scene to other users, you must distribute the `.dna` file and `workspace.mel` together with the scene.
-
-### How do I open a generated scene?
-Before you load a generated scene, follow these steps:
-- From the main menu, go to File > Set Project.
-- Select `workspace.mel`
-- Set the containing folder (with generated maya scene, `.dna` file and `workspace.mel`).
+为了解决这个问题，您应该安装[git-lfs](https://git-lfs.github.com/)，并再次克隆存储库。
+DNA 文件将被正确下载。
+如果无法安装 git-lfs，可以手动下载 DNA 文件。
 
 
-### How do I change the DNA path in the Maya scene?
-If you want to change the DNA path in the scene:
-- In `outliner`, deselect **DAG Objects Only**:
-  - ![image](img/change_path_outliner_settings.png)
-- Still in the Outliner, search for `rl4`. You will see a file whose name starts with `rl4Embedded_`. Click this file to select it.
-  - ![image](img/change_path_outliner.png)
-- In `Attribute editor` you will be able to change the path with `Dna File Path`:
-  - ![image](img/change_path_node_path.png)
+## 如何分发 Maya 场景？
+
+如果您的发行版中包含以下内容，您的场景应该可以开箱即用：
+- 场景文件（`.mb` 文件）
+- DNA（`.dna` 文件）
+- 工作区（`workspace.mel` 文件）
+
+所有这些文件需要一起分发。 如果这些文件未捆绑，并且您在 Maya 中使用装备时遇到一些问题，尝试以下步骤：
+
+### 如何共享生成的文件？
+如果要将生成的 Maya 场景分发给其他用户，则必须将“.dna”文件和“workspace.mel”与场景一起分发。
+
+### 如何打开生成的场景？
+在加载生成的场景之前，请执行以下步骤：
+- 从主菜单中，转到“文件”>“设置项目”。
+- 选择“workspace.mel”
+- 设置包含文件夹（包含生成的 Maya 场景、“.dna”文件和“workspace.mel”）。
+
+
+### 如何更改 Maya 场景中的 DNA 路径？
+如果你想改变场景中的DNA路径：
+- 在“outliner”中，取消选择“**仅 DAG 对象**”：
+   - ![图片](img/change_path_outliner_settings.png)
+- 仍在大纲视图中，搜索“rl4”。 您将看到一个名称以“rl4Embedded_”开头的文件。 单击该文件将其选中。
+   - ![图片](img/change_path_outliner.png)
+- 在“属性编辑器”中，您将能够使用“Dna 文件路径”更改路径：
+   - ![图片](img/change_path_node_path.png)
