@@ -1,7 +1,6 @@
-# Environment Setup
+# 环境设置
 
-In order be able to import from dna_viewer, the environment needs to be set up. This is done by adding this code to the
-beginning of any example mentioned below:
+为了能够从 dna_viewer 导入，需要设置环境。 这是通过将此代码添加到下面提到的任何示例的开头：
 
 ```
 from sys import path as syspath, platform
@@ -27,13 +26,13 @@ syspath.append(ROOT_DIR)
 syspath.append(LIB_DIR)
 ```
 
-When running this from Maya, the `ROOT_DIR` should be set to an absolute path to the root of the repository instead.
+从 Maya 运行此程序时，应将“ROOT_DIR”设置为存储库根目录的绝对路径。
 
 # DNA
 
-## Loading the DNA ([`load_dna`](../dna_viewer/reader/dna.py#L28))
+## 加载 DNA ([`load_dna`](../dna_viewer/reader/dna.py#L28))
 
-Loads the DNA and returns a [`DNA`](../dna_viewer/model/dna.py#L40) object.
+加载 DNA 并返回 [`DNA`](../dna_viewer/model/dna.py#L40) 对象。
 
 ```
 from dna_viewer import get_dna
@@ -42,13 +41,13 @@ dna_ada = load_dna(DNA_PATH_ADA)
 dna_taro = load_dna(DNA_PATH_TARO)
 ```
 
-This uses the following parameters:
-- `dna_path: str` - The path of the DNA file that should be used.
+这使用以下参数：
+- `dna_path: str` - 应使用的 DNA 文件的路径。
 
-## Mesh Utilities
+## 网格实用程序
 
-Mesh Utilities API explanation is located [here](/docs/dna_viewer_api_mesh_utilities.md).
+Mesh Utilities API 说明位于[此处](/docs/dna_viewer_api_mesh_utilities.md)。
 
 ## Rig Assembly
 
-Rig Assembly API explanation is located [here](/docs/dna_viewer_api_rig_assembly.md).
+Rig Assembly API 说明位于[此处](/docs/dna_viewer_api_rig_ assembly.md)。
