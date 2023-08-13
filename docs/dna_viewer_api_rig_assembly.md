@@ -1,4 +1,4 @@
-# Rig Assembly 组装
+# Rig Assembly 绑定装配
 
 装配 API 用于从给定的 DNA 文件路径轻松装配 Maya 场景中的角色装备。
 
