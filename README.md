@@ -1,21 +1,21 @@
 # MetaHuman DNA Tools
-MetaHuman DNA Tools is a tool set for processing DNA of MetaHuman. It's based on [MetaHuman DNA Calibration 1.0.3](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/1.0.3).  
+MetaHuman DNA Tools 是用于处理 MetaHuman DNA 的工具集。 它基于 [MetaHuman DNA Calibration 1.0.3] [MetaHuman DNA Calibration 1.0.3](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/1.0.3).  
 
-# Docs
+# 文档
 [数字人空间增强版MetaHuman DNA查看器保姆级安装和使用教程](https://www.bilibili.com/read/cv25377931)
 
-# New Features
+＃ 新功能
 ## DNAViewer
-- Z-up for DNA Viewer.  
-- Default file path for DNA Viewer. 
-- Select or deselect all LODs quickly.
+- DNA Viewer 的 Z 向上。
+- DNA Viewer 的默认文件路径。
+- 快速选择或取消选择所有 LOD。
 
-# Installation Requirements
-Before using you need install python package `scipy`. 
+# 安装要求
+使用之前需要安装 python 包 `scipy`。
 
-- Find the path of **maya.exe**. 
-- Goto the path in Windows cmd.  
-- Then use mayapy.exe to install python package scipy.
+- 找到 **maya.exe** 的路径。
+- 转到 Windows cmd 中的路径。
+- 然后使用 mayapy.exe 安装 python 包 scipy。
 
 ```
 mayapy.exe -m pip install scipy  
@@ -23,92 +23,92 @@ mayapy.exe -m pip install scipy
 
 
 # MetaHuman DNA Calibration
-MetaHuman DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package.
-DNA is an integral part of [MetaHuman](https://www.unrealengine.com/en-US/metahuman) identity.
-DNA files are created with [MetaHuman Creator](https://metahuman.unrealengine.com/) and downloaded with 
-[Quixel Bridge](https://docs.metahuman.unrealengine.com/en-US/downloading-metahumans-with-quixel-bridge/).
+MetaHuman DNA Calibration 是一组用于处理 MetaHuman DNA 文件的工具，捆绑在一个软件包中。
+DNA 是 [MetaHuman](https://www.unrealengine.com/en-US/metahuman) 的一个组成部分。
+DNA 文件是使用 [MetaHuman Creator](https://meta human.unrealengine.com/) 创建并使用
+[Quixel Bridge](https://docs.meta human.unrealengine.com/en-US/downloading-metahumans-with-quixel-bridge/)。
 
-MetaHuman DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package. We wanted to share this code to help users customize DNA files so they can better integrate the characters they create into their games and experiences.
-MetaHuman DNA Calibration tools are provided in a GitHub repository located at this address.
+MetaHuman DNA Calibration 是一组用于处理 MetaHuman DNA 文件的工具，捆绑在一个软件包中。 我们希望分享此代码来帮助用户自定义 DNA 文件，以便他们可以更好地将他们创建的角色融入到他们的游戏和体验中。
+位于此地址的 GitHub 存储库中提供了 MetaHuman DNA 校准工具。
 
 
-# Overview
-For an explanation about how the repository is organized, [click here](docs/repository_organization.md).
+＃ 概述
+有关如何组织存储库的说明，请[单击此处](docs/repository_organization.md)。
 
-The MetaHuman DNA Calibration repository contains two distinct tools:
-- [DNACalib](docs/dnacalib.md) (and its dependencies) 
+MetaHuman DNA 校准存储库包含两个不同的工具：
+- [DNACalib](docs/dnacalib.md)（及其依赖项）
 - [DNAViewer](docs/dna_viewer.md)
 
 
-## Required Knowledge
-To use these tools, you should be familiar with:
+## 所需知识
+要使用这些工具，您应该熟悉：
 - Rigging in Maya
 - Python
 
-## Optional Knowledge
-- C++ (for [DNACalib](docs/dnacalib.md) and its [API](docs/dnacalib_api.md))
+## 可选知识
+- C++（对于 [DNACalib](docs/dnacalib.md) 及其 [API](docs/dnacalib_api.md)）
 
 
-## DNACalib
-[DNACalib](docs/dnacalib.md) and its [API](docs/dnacalib_api.md) are used to inspect and modify DNA files. With [DNACalib](docs/dnacalib.md), you can make the following changes in DNA files:
-- Rename joints, meshes, blendshapes, and / or animated maps.
-- Remove joints, meshes, and / or joint animation.
-- Rotate, scale, and translate the rig.
-- Remove LODs.
-- Change neutral joint positions, neutral mesh positions, and blendshape delta values.
-- Prune blendshapes.
-- Remove all blend shape data.
+## DNA 校准
+[DNACalib](docs/dnacalib.md) 及其 [API](docs/dnacalib_api.md) 用于检查和修改 DNA 文件。 使用 [DNACalib](docs/dnacalib.md)，您可以在 DNA 文件中进行以下更改：
+- 重命名关节、网格、混合形状和/或动画贴图。
+- 删除关节、网格和/或关节动画。
+- 旋转、缩放和平移装备。
+- 删除 LOD。
+- 更改中性关节位置、中性网格位置和混合形状增量值。
+- 修剪混合形状。
+- 删除所有混合形状数据。
 
 
-## External Software Dependencies
-DNACalib's Python wrapper is compiled against Python 3.7. Pre-compiled binaries for Windows and Linux (both 64-bit) are part of the repository.
-If you are using a different version of Python, you must recompile it. Any Python 3 version should be fine.
-If a user has a different platform or architecture, the library and its dependencies must be compiled.
+## 外部软件依赖项
+DNACalib 的 Python 包装器是针对 Python 3.7 编译的。 适用于 Windows 和 Linux（均为 64 位）的预编译二进制文件是存储库的一部分。
+如果您使用不同版本的Python，则必须重新编译它。 任何 Python 3 版本都应该没问题。
+如果用户有不同的平台或体系结构，则必须编译库及其依赖项。
 
-**Important**
-DNA files are stored as [LFS (Large File Storage)](https://git-lfs.github.com/) files. They are downloaded with the rest of the code if 
-git-lfs is installed and configured to use. If you are not using git-lfs, you have to download DNA files manually. 
+**重要的**
+DNA 文件存储为 [LFS（大文件存储）](https://git-lfs.github.com/) 文件。 如果满足以下条件，它们将与其余代码一起下载
+git-lfs 已安装并配置为使用。 如果您不使用 git-lfs，则必须手动下载 DNA 文件。
 
-Additional information can be found [here](docs/faq.md#fix--runtimeerror--error-loading-dna--dna-signature-mismatched-expected-dna-got-ver-)
+其他信息可以在[此处](docs/faq.md#fix--runtimeerror--error-loading-dna--dna-signature-mismatched-expected-dna-got-ver-)找到
 
-**Warning:** 
-Python 2 is not supported.
+**警告：**
+不支持 Python 2。
 
-DNACalib can be used in C++ projects as a C++ library.
+DNACalib 可以作为 C++ 库在 C++ 项目中使用。
 
-DNACalib Python wrapper can be used in Python 3.7, `mayapy` (Maya's Python interpreter), or Maya 2022.
+DNACalib Python 包装器可在 Python 3.7、“mayapy”（Maya 的 Python 解释器）或 Maya 2022 中使用。
 
 
-## DNAViewer
-With DNAViewer, you can:
-- Create functional rigs for Maya.
-- Export FBX files.
-- Read internal parts of DNA files.
+## DNA查看器
+使用 DNAViewer，您可以：
+- 为 Maya 创建功能装备。
+- 导出 FBX 文件。
+- 读取 DNA 文件的内部部分。
 
-DNAViewer can be used in `mayapy` (Maya's Python interpreter) or in Maya 2022, except [Propagating changes from Maya scene to dna](/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py) which can be used just in Maya.
+DNAViewer 可以在 `mayapy`（Maya 的 Python 解释器）或 Maya 2022 中使用，但 [将更改从 Maya 场景传播到 dna](/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py) 除外，它只能在 Maya 中使用。
 
-# Examples
-Several Python examples are provided for reference and can be found in the **examples'** folder:
-- [Showcase a few commands](/examples/dnacalib_demo.py)
-- [Rename a joint](/examples/dnacalib_rename_joint_demo.py)
-- [Create a small DNA from scratch](/examples/dna_demo.py)
-- [Create a new DNA from an existing one by extracting specific LODs](/examples/dnacalib_lod_demo.py)
-- [Remove a joint](/examples/dnacalib_remove_joint.py)
-- [Clear blend shape data](/examples/dnacalib_clear_blend_shapes.py)
-- [Subtract values from neutral mesh](/examples/dnacalib_neutral_mesh_subtract.py)
-- [Simple UI in Maya](examples/dna_viewer_run_in_maya.py) and some [documentation](docs/dna_viewer.md#usage-in-maya) for it
-- [Generate rig and export FBX per LOD](examples/dna_viewer_demo.py)
-- [Propagating changes from Maya scene to dna](/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py)
+＃ 例子
+提供了几个 Python 示例供参考，可以在 **examples'** 文件夹中找到：
+- [展示一些命令](/examples/dnacalib_demo.py)
+- [重命名关节](/examples/dnacalib_rename_joint_demo.py)
+- [从头开始创建一个小 DNA](/examples/dna_demo.py)
+- [通过提取特定 LOD 从现有 DNA 中创建新 DNA](/examples/dnacalib_lod_demo.py)
+- [删除关节](/examples/dnacalib_remove_joint.py)
+- [清除混合形状数据](/examples/dnacalib_clear_blend_shapes.py)
+- [从中性网格中减去值](/examples/dnacalib_neutral_mesh_subtract.py)
+- [Maya 中的简单 UI](examples/dna_viewer_run_in_maya.py) 和一些 [文档](docs/dna_viewer.md#usage-in-maya)
+- [生成装备并导出每个 LOD 的 FBX](examples/dna_viewer_demo.py)
+- [将更改从 Maya 场景传播到 dna](/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py)
 
-## Example DNA files
-[Two demo DNA files](data/dna) are provided for easier testing of this tool. Any DNA generated with [MetaHumanCreator](https://www.unrealengine.com/en-US/metahuman)
-should work.
+## DNA 文件示例
+提供[两个演示 DNA 文件](data/dna)，以便更轻松地测试该工具。 使用 [MetaHumanCreator](https://www.unrealengine.com/en-US/metahuman) 生成的任何 DNA
+应该管用。
 
-# Notes
-If a user runs examples in Maya 2022, the value for `ROOT_DIR` should be changed and absolute paths must be used, 
-eg. `c:/dna_calibration` in Windows or `/home/user/dna_calibration` in Linux. Important: Use `/` (forward slash), Maya uses forward slashes in path.
+# 注释
+如果用户在 Maya 2022 中运行示例，则应更改“ROOT_DIR”的值并且必须使用绝对路径，
+例如。 Windows 中为“c:/dna_calibration”，Linux 中为“/home/user/dna_calibration”。 重要提示：使用“/”（正斜杠），Maya 在路径中使用正斜杠。
 
-See the [FAQ guide](docs/faq.md) for additional specifications.
+有关其他规范，请参阅[常见问题解答指南](docs/faq.md)。
 
-# License
-MetaHuman DNA Calibration is released with [licence](LICENSE).
+＃ 执照
+MetaHuman DNA Calibration 已获得[许可证](LICENSE) 发布。
