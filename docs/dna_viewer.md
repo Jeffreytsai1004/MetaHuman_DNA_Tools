@@ -38,7 +38,7 @@ Maya 中的用法说明 [here](dna_viewer_maya.md)
 
 ![image](img/flow_scene_build.png)
 
-钻机构建过程的流程如下：
+Blender构建过程的流程如下：
 
 ![image](img/flow_character_build.png)
 
