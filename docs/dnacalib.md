@@ -1,26 +1,23 @@
 # DNACalib
-This library is used for performing modifications on a DNA file.
-It is written in C++ and there is also a Python wrapper for it. [SWIG](https://www.swig.org/) library is used for generating
-bindings for Python. DNACalib can be used in command line, or in Maya.
-Binaries for Windows and Linux are provided. **If you are using a different architecture and/or platform, you must build DNACalib.**
+该库用于对 DNA 文件进行修改。 
+它是用 C++ 编写的，并且还有一个 Python 包装器。 
+SWIG 库用于生成 Python 的绑定。 DNACalib 可以在命令行或 Maya 中使用。 
+提供了适用于 Windows 和 Linux 的二进制文件。 
+如果您使用不同的架构和/或平台，则必须构建 DNACalib。
 
-## DNACalib folder structure
-- [`DNACalib`](/dnacalib/DNACalib) - Contains C++ source code of DNACalib and its dependencies. There is a library for
-reading and writing DNA files, along with a few other utility libraries.
-- [`PyDNACalib`](/dnacalib/PyDNACalib) - Contains the source code for generating the Python wrapper for DNACalib.
-- [`PyDNA`](/dnacalib/PyDNA) - Contains the source code for generating the Python wrapper for DNA library, that is under
-DNACalib folder containing C++ source code.
-- [`SPyUS`](/dnacalib/SPyUS) - Contains some common SWIG interface files used by both PyDNACalib and PyDNA.
-- [`CMakeModulesExtra`](/dnacalib/CMakeModulesExtra) - Contains some common CMake functions that are used throughout the
-project, both in C++ and the Python wrapper.
+## DNACalib 文件夹结构
+- [`DNACalib`](/dnacalib/DNACalib) - 包含 DNACalib 的 C++ 源代码及其依赖项。 有一个图书馆读取和写入 DNA 文件，以及一些其他实用程序库。
+- [`PyDNACalib`](/dnacalib/PyDNACalib) - 包含用于生成 DNACalib 的 Python 包装器的源代码。
+- [`PyDNA`](/dnacalib/PyDNA) - 包含用于生成 DNA 库的 Python 包装器的源代码，位于DNACalib 文件夹包含 C++ 源代码。
+- [`SPyUS`](/dnacalib/SPyUS) - 包含 PyDNACalib 和 PyDNA 使用的一些常见 SWIG 接口文件。
+- [`CMakeModulesExtra`](/dnacalib/CMakeModulesExtra) - 包含一些在整个过程中使用的常见 CMake 函数项目，采用 C++ 和 Python 包装器。
 
-## Usage
+## 用法
 
-For example, to change rotation values of neutral joints, use the 
+例如，要更改中性关节的旋转值，请使用
 [`SetNeutralJointRotationsCommand`](/dnacalib/DNACalib/include/dnacalib/commands/SetNeutralJointRotationsCommand.h).
 
-Below is an example that reads DNA, changes rotation values of all neutral joints to `{1, 2, 3}`, and overwrites the DNA
-file with these new values.
+下面是读取 DNA，将所有中性关节的旋转值更改为 `{1, 2, 3}`, 并用这些新值覆盖 DNA 文件。
 
 ```
 
@@ -58,39 +55,39 @@ if (!dnac::Status::isOk()) {
 }
 ```
 
-## Examples
+## 例子
 
 ### C++
-Examples of C++ library usage can be found [here](/dnacalib/DNACalib/examples).
+C++ 库的使用示例可以在[此处](/dnacalib/DNACalib/examples) 找到。
 
-These are:
-- [Chain multiple commands](/dnacalib/DNACalib/examples/CommandSequence.cpp)
-- [Rename a blendshape](/dnacalib/DNACalib/examples/SingleCommand.cpp)
+这些都是：
+- [链接多个命令](/dnacalib/DNACalib/examples/CommandSequence.cpp)
+- [重命名混合形状](/dnacalib/DNACalib/examples/SingleCommand.cpp)
 
 ### Python
-Examples of using the library from Python are [here](/examples).
+使用 Python 库的示例是[此处](/examples)。
 
-These are:
-- [Showcase a few commands](/examples/dnacalib_demo.py)
-- [Rename a joint](/examples/dnacalib_rename_joint_demo.py)
-- [Create a small DNA from scratch](/examples/dna_demo.py)
-- [Create a new DNA from an existing one by extracting specific LODs](/examples/dnacalib_lod_demo.py)
-- [Remove a joint](/examples/dnacalib_remove_joint.py)
-- [Clear blend shape data](/examples/dnacalib_clear_blend_shapes.py)
-- [Subtract values from neutral mesh](/examples/dnacalib_neutral_mesh_subtract.py)
+这些都是：
+- [展示一些命令](/examples/dnacalib_demo.py)
+- [重命名关节](/examples/dnacalib_rename_joint_demo.py)
+- [从头开始创建一个小 DNA](/examples/dna_demo.py)
+- [通过提取特定 LOD 从现有 DNA 中创建新 DNA](/examples/dnacalib_lod_demo.py)
+- [删除关节](/examples/dnacalib_remove_joint.py)
+- [清除混合形状数据](/examples/dnacalib_clear_blend_shapes.py)
+- [从中性网格中减去值](/examples/dnacalib_neutral_mesh_subtract.py)
 
 
 ## Build
-Prebuilt binaries for 64-bit Windows and Linux are [provided](/lib).
-If you are using a different architecture and/or platform, you must build DNACalib.
+[provided](/lib)适用于 64 位 Windows 和 Linux 的预构建二进制文件。
+如果您使用不同的架构和/或平台，则必须构建 DNACalib。
 
-Prerequisites:
-- [CMake](https://cmake.org/download/) at least version 3.14
-- [SWIG](https://www.swig.org/download.html) at least version 4.0.0
-- [Python](https://www.python.org/downloads/) To specify the exact version of python3 to use, set the CMake variable
-`PYTHON3_EXACT_VERSION`. For example, to use the lib from Maya 2022, use version 3.7.
+先决条件：
+- [CMake](https://cmake.org/download/) 至少版本 3.14
+- [SWIG](https://www.swig.org/download.html) 至少版本 4.0.0
+- [Python](https://www.python.org/downloads/) 要指定要使用的 python3 的确切版本，请设置 CMake 变量
+`PYTHON3_EXACT_VERSION`。 例如，要使用 Maya 2022 中的库，请使用版本 3.7。
 
-Use CMake to generate the build scripts required for building, e.g. by executing the following commands from the
+使用 CMake 生成构建所需的构建脚本，例如 通过执行以下命令
 [`dna_calibration/dnacalib/`](/dnacalib) directory:
 
 ```
@@ -98,8 +95,7 @@ mkdir build
 cd build
 cmake ..
 ```
-
-And subsequently, to start the build process:
+随后，开始构建过程：
 ```
 cmake --build
 ```
